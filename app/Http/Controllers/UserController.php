@@ -8,6 +8,7 @@ use App\Http\Requests\UserRequest;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
@@ -19,7 +20,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::latest('id')->paginate();
+        $users = DB::table('users')
+                    ->join('role_user', 'role_user.user_id', '=', 'users.id')
+                    ->where('role_user.role_id', 1)
+                    ->orderBy('users.id')->paginate();
+
         return view('users.index', compact('users'));
     }
 

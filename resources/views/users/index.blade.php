@@ -26,8 +26,8 @@
 								<td>{{ $user->id }}</td>
 								<td>{{ $user->name }}</td>
 								<td>{{ $user->email }}</td>
-								<td>{{ $user->created_at->format('d-m-Y') }}</td>
-								<td>{{ $user->updated_at->diffForHumans() }}</td>
+								<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $user->created_at)->format('d-m-Y') }}</td>
+								<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $user->updated_at)->diffForHumans() }}</td>
 								<td>
 									<a href="{{ route('user-edit', $user->id) }}" class="btn btn-info btn-xs">Edit</a>
 									{!! Form::open(['url' => route('user-delete', $user->id), 'method' => 'DELETE', 'class' => 'inline']) !!}
