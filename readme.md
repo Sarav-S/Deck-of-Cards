@@ -15,3 +15,15 @@
 5. Type php artisan migrate and press enter.
 6. Type php artisan db:seed and press enter.
 7. Type php artisan serve and press enter. Open the displayed url in web browser.
+
+## Login
+
+### For classic user login
+
+username : user@gmail.com
+password : user123
+
+### For admin login
+
+username : admin@gmail.com
+password : admin123
