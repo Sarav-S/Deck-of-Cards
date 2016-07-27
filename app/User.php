@@ -40,7 +40,7 @@ class User extends Authenticatable implements StaplerableInterface
                 'thumb' => '100x100'
             ],
             'url'         => '/uploads/avatar/:attachment/:id/:style/:filename',
-            'default_url' => '/image/:attachment/:style/missing.jpg',
+            'default_url' => '/default.gif',
             'path'        => ':app_root/public/uploads/media/uploads/avatar/:attachment/:id/:style/:filename',
         ]);
 

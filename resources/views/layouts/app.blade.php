@@ -74,8 +74,15 @@
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
+                            <?php 
+                            if (stripos(auth()->user()->image->url('thumb'), 'default.gif') !== FALSE) {
+                                $url = url('/').'/default.gif';
+                            } else {
+                                $url = url('/').'/uploads/media'.auth()->user()->image->url('thumb');
+                            }
+                            ?>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <img class="profile-pic" src="{{ url('/').'/uploads/media'.auth()->user()->image->url('thumb') }}" alt="">
+                                <img class="profile-pic" src="{{ $url }}" alt="">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
