@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	<div class="col-sm-6 col-sm-offset-3">
+	<div class="col-sm-12">
 		@include('partials.errors')
 		{!! Form::model($record, ['url' => route('my-decks.update', $record->id), 'method' => 'PUT', 'class' => 'validate form-horizontal', 'files' => true]) !!}
 			@include('users.decks._form')

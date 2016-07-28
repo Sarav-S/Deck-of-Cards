@@ -20,7 +20,7 @@ class Common {
 
 	public function getCardList() {
 		
-		return Card::orderBy('name')->lists('name', 'id');
+		return Card::with('category')->orderBy('name')->get();
 	}
 
 	public function getDecks() {
