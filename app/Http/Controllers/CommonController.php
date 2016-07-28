@@ -37,7 +37,7 @@ class CommonController extends Controller {
      * Gets the decks comparison
      */
     public function getCompareDecks($deckOne = null, $deckTwo = null) {
-
+    	
         return view('decks_compare', compact('deckOne', 'deckTwo'));
     }
 

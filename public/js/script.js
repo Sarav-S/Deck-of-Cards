@@ -19,7 +19,7 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	$('.compare-decks').click(function(event){
+	$('.compare-decks').submit(function(event){
 		event.preventDefault();
 		var $that = $(this);
 

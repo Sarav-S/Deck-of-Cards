@@ -17,10 +17,10 @@
 						@if (count($decks))
 						{!! Form::select('deck2', $decks, $deckTwo, ['class' => 'form-control', 'id' => 'deck2']) !!}
 						@else
-							<input type="text" name="deck2" id="deck2" placeholder="Entire Deck Unique Id" class="form-control">
+							<input type="text" name="deck2" value="{{ $deckTwo }}" id="deck2" placeholder="Entire Deck Unique Id" class="form-control">
 						@endif
 					@else
-					<input type="text" name="deck2" id="deck2" placeholder="Entire Deck Unique Id" class="form-control">
+					<input type="text" name="deck2" id="deck2" value="{{ $deckTwo }}" placeholder="Entire Deck Unique Id" class="form-control">
 					@endif
 				</div>
 				<div class="col-sm-6 col-sm-offset-3 mt-2 text-center">
