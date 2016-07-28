@@ -21,7 +21,7 @@ if (in_array($card->id, $cards)) {
 	$attributes['checked'] = "checked";
 }
 ?>
-<div class="col-sm-4 animate-me slideInUp">
+<div class="col-sm-4">
     <div class="card hovercard">
         <div class="cardheader">
             <h2>{{ $card->name }}</h2>
